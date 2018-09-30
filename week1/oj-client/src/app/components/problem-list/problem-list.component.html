@@ -1,3 +1,15 @@
-<p>
-  problem-list works!
-</p>
+<div class="container">
+    <div class="List-group">
+        <a class="List-group-item" *ngFor="let problem of problems">
+            
+            <span class="{{'pull-left badge difficulty diff-' + problem.difficulty.toLocalLowerCase()}}">
+                
+            {{problem.difficulty}}
+                
+            </span>
+            
+        <strong class="title">{{problem.id}}.{{problem.name}}</strong>
+        
+        </a>
+    </div>
+</div>
