@@ -1,14 +1,23 @@
+
+<br/><br/><br/><br/><br/><br/>
 <div class="container">
+	
     <div class="List-group">
-        <a class="List-group-item" *ngFor="let problem of problems">
-            
-            <span class="{{'pull-left badge difficulty diff-' + problem.difficulty.toLocalLowerCase()}}">
+        <a class="list-group-item"
+        *ngFor="let problem of problems"
+        [routerLink] = "['/problems', problem.id]">
+          
+            <span 
+            class="{{'pull-left badge difficulty diff-' + problem.difficulty.toLocaleLowerCase()}}">
                 
             {{problem.difficulty}}
                 
             </span>
             
-        <strong class="title">{{problem.id}}.{{problem.name}}</strong>
+         
+            
+            
+        <strong class="title">{{problem.id}}. {{problem.name}}</strong>
         
         </a>
     </div>
